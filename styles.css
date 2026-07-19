@@ -210,6 +210,13 @@ body {
   flex-wrap: wrap;
 }
 
+.settings-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* Profile Selector styling */
 .profile-selector-container {
   display: flex;
@@ -1159,18 +1166,56 @@ input:checked + .slider:before {
     gap: 12px;
   }
   .main-header {
-    padding: 12px 16px;
+    padding: 16px;
     border-radius: var(--radius-md);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .logo-area {
+    justify-content: center;
   }
   .action-panel {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .profile-selector-container {
     justify-content: space-between;
+    width: 100%;
+  }
+  .profile-selector-container select {
+    flex-grow: 1;
+  }
+  .settings-group {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .v-divider {
+    display: none;
   }
   .timetable-card {
     padding: 12px;
   }
   .color-picker-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Dialog actions mobile layout */
+  .dialog-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .right-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .right-actions .btn,
+  #delete-slot-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
